@@ -6,8 +6,10 @@
 # vagrant box add trusty64 http://files.vagrantup.com/trusty64.box
 
 nodes = [
+  { :hostname => 'web1', :ip => '192.168.0.40', :box => 'ubuntu/trusty64' },
   { :hostname => 'web2', :ip => '192.168.0.41', :box => 'ubuntu/trusty64' },
   { :hostname => 'web3', :ip => '192.168.0.42', :box => 'ubuntu/trusty64' },
+  { :hostname => 'lbserver',  :ip => '192.168.0.43', :box => 'ubuntu/trusty64', :ram => 512 }
 ]
 
 Vagrant.configure("2") do |config|
